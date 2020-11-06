@@ -26,9 +26,9 @@ async function showPosts() {
         const postElement = document.createElement('div');
         postElement.classList.add('post');
         postElement.innerHTML = `
-            <h3>post #${post.id}</h3>
+            <h3>Post #${post.id}</h3>
             <div> 
-                <h2 class="post-title">${post.title}</h2>
+                <h2 class="post-title">Title: ${post.title}</h2>
                 <p class="post-body">${post.body}</p>
             </div>
         `;
