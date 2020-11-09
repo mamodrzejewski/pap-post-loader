@@ -2,7 +2,8 @@
  * POST LOADER APP
  * PAP 20Z
  * 
- * This is a very simple application created for a programming course.
+ * This is a very simple application created for the PAP course @ WUT.
+ * 
  * It allows to load 5 posts from the JSON placeholder API and display
  * them on the screen. It uses HTML5, CSS3 and JS with axios.
  */
@@ -32,12 +33,14 @@ let page = 1;
 /** 
  * Get posts from JSON Placeholder API using axios.
  * 
+ * Returns the data from the GET request.
+ * 
  * This function uses the async/await keywords which
  * were introduced in ES8. Together with axios (an external library),
  * the async/await syntax will allow you to perform simple API calls
  * similar to the way you have done it using python's requests module.
  * 
- * Returns the data from the GET request.
+ * Please take a moment to read the documentation of the JSON Placeholder API.
  */
 async function getPosts() {
     const res = await axios(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`);
@@ -49,9 +52,10 @@ async function getPosts() {
 /**
  * Load 5 more posts into the DOM.
  * 
- * This function calls getPosts() to get the data 
- * and then creates a new DOM elemnent for each of 
- * the posts.
+ * This function calls getPosts() to get the data,
+ * creates a new DOM elemnent for each of the posts
+ * and inserts them into the posts container, thus 
+ * inserting them into the DOM.
  * 
  * As an exercise, try to refactor the loop in this function! 
  * HINT: you can start by writing a createPost() function.
@@ -59,6 +63,7 @@ async function getPosts() {
 async function loadPosts() {
     const posts = await getPosts();
 
+    // arrow function inside of forEach loop!
     // for each post create a new DOM element
     posts.forEach(post => {
         // in JS we can create DOM elements out of nowhere
@@ -82,7 +87,7 @@ async function loadPosts() {
  * Add event listener to the load posts button.
  * 
  * The type of event is "click" and the second parameter is 
- * an arrow function which takes no arguments and calls showPosts().
+ * an arrow function which takes no arguments and calls loadPosts().
  * After clicking the button, the function will be called.
  */
 loadButton.addEventListener("click", () => loadPosts());
