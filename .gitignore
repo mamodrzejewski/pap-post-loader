@@ -1,2 +1,5 @@
+.gitignore
 # Local Netlify folder
 .netlify
+# Local VS Code folder
+.vscode

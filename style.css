@@ -9,23 +9,26 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+h1 {
+    font-size: 50px;
+}
+
 .container {
+    max-width: 38rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    margin: 0;
-    padding-bottom: 100px; 
+    margin: auto;
 }
 
 #load-posts-btn {
     cursor: pointer;
     background-color:  #f9fafb;
     color: royalblue;
-    border: 2px solid royalblue;
+    border: 3px solid royalblue;
     border-radius: 4px;
-    display: block;
     font-size: 24px;
     padding: 10px 20px;
 }
@@ -36,21 +39,29 @@ body {
 }
 
 .posts-container {
-    padding: 10px;
+    padding: 2rem;
 }
 
 .post {
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 3px solid #000;
     border-radius: 4px;
-    padding: 10px;
-    margin: 20px 0;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.post .post-id {
+    color: royalblue;
+    margin-top: 10px;
+    margin-left: 1rem;
 }
 
 .post .post-title {
     margin: 0;
+    padding: 5px 1rem;
 }
 
 .post .post-body {
-    margin-left: 20px;
+    font-size: 1.2rem;
+    margin-left: 1rem;
 }
