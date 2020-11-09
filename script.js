@@ -1,7 +1,6 @@
 /**
  * POST LOADER APP
  * PAP 20Z
- * author: Mateusz Modrzejewski
  * 
  * This is a very simple application created for a programming course.
  * It allows to load 5 posts from the JSON placeholder API and display
